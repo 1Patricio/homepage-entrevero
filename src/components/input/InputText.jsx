@@ -1,4 +1,4 @@
-function InputText({ label, placeholder, value, onChange }) {
+function InputText({ label, placeholder, value, name }) {
     return (
         <>
             <label style={{ fontFamily: "sans-serif", padding: "10px" }} htmlFor={label}>{label}</label>
@@ -16,11 +16,10 @@ function InputText({ label, placeholder, value, onChange }) {
                 }}
                 type="text"
                 id={label} // Use o label como id para uma melhor acessibilidade
-                name={label.toLowerCase()} // Use o label em letras minúsculas como name
+                name={name} // Use o label em letras minúsculas como name
                 size="20"
                 placeholder={placeholder}
                 value={value} // Adiciona a prop value
-                onChange={onChange} // Adiciona a prop onChange
             />
         </>
     );

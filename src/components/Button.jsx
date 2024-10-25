@@ -1,7 +1,6 @@
-function Button({ click, nome, colorButton }) {
-    // Verifica se a prop click é uma função
-    const handleClick = typeof click === "function" ? click : () => {};
-  
+Button.jsx
+
+function Button({ nome, colorButton }) {
     return (
       <button
         style={{
@@ -15,7 +14,6 @@ function Button({ click, nome, colorButton }) {
           fontSize: "19px",
         }}
         type="submit"
-        onClick={handleClick} // Usa a função handleClick
       >
         {nome}
       </button>
@@ -23,4 +21,3 @@ function Button({ click, nome, colorButton }) {
   }
   
   export default Button;
-  

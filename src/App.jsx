@@ -10,7 +10,7 @@ function App() {
   const [cardsData, setCardsData] = useState([]); // Estado para armazenar os dados dos cards
 
   const addCard = (newCard) => {
-    setCardsData((prevCards) => [...prevCards, newCard]); // Adiciona um novo card
+    setCardsData([...cardsData, newCard]); // Adiciona um novo card
   };
 
   return (
@@ -22,12 +22,13 @@ function App() {
         }
       />
       <Weeelcome name={"Anderson"} />
-      
+      <div style={{display:"flex", justifyContent: "space-evenly"}}>
       {/* Passa a função addCard como prop para o ExibirCard */}
       <ExibirCard cardsData={cardsData} />
       
       {/* Passa a função addCard como prop para o Input */}
       <Input addCard={addCard} />
+      </div>
     </>
   );
 }
