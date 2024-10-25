@@ -8,5 +8,4 @@ function Header({title, srcLogo}) {
         </>
     )
 }
-
 export default Header

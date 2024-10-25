@@ -1,5 +1,3 @@
-Button.jsx
-
 function Button({ nome, colorButton }) {
     return (
       <button

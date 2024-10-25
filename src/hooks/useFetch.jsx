@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function useFetch(url) {
+    //  Declara três estados: `cep` para armazenar dados
     const [cep, setCep] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -15,7 +16,7 @@ export function useFetch(url) {
             try {
                 const resposta = await fetch(url);
                 if (!resposta.ok) {
-                    throw new Error("Network response was not ok");
+                    throw new Error("Requisão não deu certo");
                 }
                 const cepJson = await resposta.json();
                 setCep(cepJson);

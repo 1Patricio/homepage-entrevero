@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 
 import Weeelcome from './components/Weelcome';
 import Input from './components/input/Input';
@@ -23,7 +22,6 @@ function App() {
       />
       <Weeelcome name={"Anderson"} />
       <div style={{display:"flex", justifyContent: "space-evenly"}}>
-      {/* Passa a função addCard como prop para o ExibirCard */}
       <ExibirCard cardsData={cardsData} />
       
       {/* Passa a função addCard como prop para o Input */}
